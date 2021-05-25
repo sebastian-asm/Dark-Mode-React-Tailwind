@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import useDarkMode from './hooks/useDarkMode';
 
-function App() {
+export default function App() {
+  useDarkMode();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-800 transition duration-300">
+      <Navbar />
+      <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-200 text-center">
+        Dark Mode en React con Tailwind CSS
+      </h1>
     </div>
   );
 }
-
-export default App;
